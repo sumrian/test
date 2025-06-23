@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="aaa">aaa</div>
+<script>
+  const element = document.getElementById('aaa');
+  const style = {color:'red'}
+  element.style = {...element.style,...style}// 没反应，
+  Object.assign(element.style, style)// 修改成功 分析原因
+  element.onclick = function () {
+    console.log(12321)}
+  element.id = 'bbb';
+  console.log(element)
+</script>
+</body>
+</html>
